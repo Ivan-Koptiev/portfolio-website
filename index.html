@@ -110,8 +110,8 @@
                     <p><strong>Summary:</strong><br>
                     Built a text classification pipeline for news articles using bag-of-words and n-gram features. Compared LinearSVC, XGBoost, and AdaBoost models. LinearSVC achieved <b>86.9% accuracy</b>, outperforming the others. Visualizations include class distribution and model comparison.
                     </p>
-                    <img src="images/original_class_distribution.png" alt="Class Distribution" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <img src="images/model_comparison.png" alt="Model Comparison" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/NLP_n_grams/original_class_distribution.png" alt="Class Distribution" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/NLP_n_grams/model_comparison.png" alt="Model Comparison" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
                     <ul>
                         <li>Dataset: News articles (4 categories, balanced)</li>
                         <li>Techniques: NLTK preprocessing, n-grams, model comparison</li>
@@ -135,8 +135,8 @@
                     <p><strong>Summary:</strong><br>
                     Developed a deep convolutional neural network to classify images from the CIFAR-10 dataset. The model uses batch normalization, dropout, and real-time data augmentation to improve generalization. Achieved <b>82.8% accuracy</b> and <b>83.8% validation accuracy</b> after 50 epochs.
                     </p>
-                    <img src="images/model_performance.png" alt="Model Performance" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <img src="images/predictions.png" alt="Predictions Grid" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/CNN_cifar10/model_performance.png" alt="Model Performance" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/CNN_cifar10/predictions.png" alt="Predictions Grid" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
                     <ul>
                         <li>Dataset: CIFAR-10 (60,000 images, 10 classes)</li>
                         <li>Techniques: Batch normalization, dropout, data augmentation</li>
@@ -160,9 +160,9 @@
                     <p><strong>Summary:</strong><br>
                     Built a K-Nearest Neighbors classifier for the scikit-learn wine dataset, systematically testing K values, distance metrics, and the effect of scaling. Achieved <b>98.15% accuracy</b> with optimal parameters and demonstrated the dramatic impact of feature scaling. Visualizations include K value analysis, confusion matrix, and scaling comparison.
                     </p>
-                    <img src="images/knn_analysis.png" alt="KNN Analysis" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <img src="images/confusion_matrix.png" alt="Confusion Matrix" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <img src="images/scaling_comparison.png" alt="Scaling Comparison" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/wine_classifier/plots/knn_analysis.png" alt="KNN Analysis" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/wine_classifier/plots/confusion_matrix.png" alt="Confusion Matrix" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/wine_classifier/plots/scaling_comparison.png" alt="Scaling Comparison" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
                     <ul>
                         <li>Dataset: scikit-learn wine (178 samples, 13 features, 3 classes)</li>
                         <li>Techniques: KNN, scaling, cross-validation, feature analysis</li>
@@ -186,7 +186,7 @@
                     <p><strong>Summary:</strong><br>
                     This project implements a Deep Q-Network (DQN) agent to solve the Acrobot-v1 control problem. The agent uses a three-layer neural network, experience replay, and target networks to achieve the solved threshold of -99.83 average reward. Key insights include the importance of balanced architecture, patient exploration, and training stability techniques like gradient clipping.
                     </p>
-                    <img src="images/dqn_training_visualization.png" alt="DQN Training Visualization" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/RL_DQN/dqn_training_visualization.png" alt="DQN Training Visualization" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
                     <ul>
                         <li>Environment: Acrobot-v1 (double pendulum)</li>
                         <li>Network: 6 → 64 → 64 → 32 → 3</li>
@@ -211,8 +211,8 @@
                     <p><strong>Summary:</strong><br>
                     Explores unsupervised learning with DBSCAN on the classic Iris dataset. The project features automated epsilon selection using the elbow method, comprehensive cluster visualizations, and a direct comparison to true species labels. Results include multi-dimensional plots, cluster statistics, and insights into noise handling and parameter tuning.
                     </p>
-                    <img src="images/elbow_curve.png" alt="Elbow Curve for Epsilon Selection" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <img src="images/iris_clustering.png" alt="Iris Clustering Visualization" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/DBSCAN/elbow_curve.png" alt="Elbow Curve for Epsilon Selection" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/DBSCAN/iris_clustering.png" alt="Iris Clustering Visualization" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
                     <ul>
                         <li>Automated epsilon selection (elbow method)</li>
                         <li>Clustered Iris data into 2 groups + noise</li>
@@ -239,9 +239,9 @@
                     <p><strong>Summary:</strong><br>
                     Built a text classification pipeline for the 20 Newsgroups dataset using TF-IDF features and Multinomial Naive Bayes. The model achieved <b>91.2% accuracy</b> and provided insights into class separability and feature importance. Visualizations include class distribution, confusion matrix, and top words per class.
                     </p>
-                    <img src="images/class_distribution.png" alt="Class Distribution" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <img src="images/confusion_matrix.png" alt="Confusion Matrix" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <img src="images/feature_importance.png" alt="Feature Importance" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/Naive_bayes/class_distribution.png" alt="Class Distribution" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/Naive_bayes/confusion_matrix.png" alt="Confusion Matrix" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/Naive_bayes/feature_importance.png" alt="Feature Importance" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
                     <ul>
                         <li>Dataset: 20 Newsgroups (4 categories)</li>
                         <li>Techniques: TF-IDF, n-grams, feature importance analysis</li>
@@ -265,7 +265,7 @@
                     <p><strong>Summary:</strong><br>
                     This project demonstrates BERT for text classification and question answering, including fine-tuning on a real sentiment dataset. The model predicts sentiment for new texts and answers questions using transfer learning. Demo predictions and a bar plot of sentiment counts are included.
                     </p>
-                    <img src="images/demo_sentiment_counts.png" alt="Demo Sentiment Counts" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/NLP_Bert/demo_sentiment_counts.png" alt="Demo Sentiment Counts" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
                     <ul>
                         <li>Dataset: Tweets labeled as positive/negative</li>
                         <li>Outputs: Sentiment predictions, demo bar plot, question answering</li>
@@ -290,8 +290,8 @@
                     <p><strong>Summary:</strong><br>
                     Built a deep convolutional GAN from scratch in TensorFlow to generate images of clothing items. The project features a custom training loop, TPU acceleration for fast training, and a streamlined architecture for efficiency. Final results include high-quality generated images and a clear adversarial training dynamic.
                     </p>
-                    <img src="images/final_generated_images.png" alt="Final Generated Images" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <img src="images/training_loss.png" alt="Training Loss" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/GAN_tf_mnist/final_generated_images.png" alt="Final Generated Images" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/GAN_tf_mnist/training_loss.png" alt="Training Loss" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
                     <ul>
                         <li>Dataset: Fashion MNIST (28x28 grayscale images)</li>
                         <li>Techniques: Custom GAN, mixed precision, TPU acceleration</li>
@@ -315,12 +315,12 @@
                     <p><strong>Summary:</strong><br>
                     Used a Random Forest classifier to predict car acceptability from categorical features in the UCI Car Evaluation dataset. The project includes ordinal encoding, stratified splitting, and detailed hyperparameter tuning with validation curves. Visualizations highlight class distribution, validation curves, confusion matrix, and feature importance.
                     </p>
-                    <img src="images/class_distribution.png" alt="Class Distribution" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <img src="images/validation_curve_n_estimators.png" alt="Validation Curve n_estimators" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <img src="images/validation_curve_max_depth.png" alt="Validation Curve max_depth" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <img src="images/validation_curve_min_samples_split.png" alt="Validation Curve min_samples_split" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <img src="images/confusion_matrix.png" alt="Confusion Matrix" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <img src="images/feature_importance.png" alt="Feature Importance" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/Car Evaluation Random Forest/class_distribution.png" alt="Class Distribution" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/Car Evaluation Random Forest/validation_curve_n_estimators.png" alt="Validation Curve n_estimators" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/Car Evaluation Random Forest/validation_curve_max_depth.png" alt="Validation Curve max_depth" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/Car Evaluation Random Forest/validation_curve_min_samples_split.png" alt="Validation Curve min_samples_split" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/Car Evaluation Random Forest/confusion_matrix.png" alt="Confusion Matrix" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/Car Evaluation Random Forest/feature_importance.png" alt="Feature Importance" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
                     <ul>
                         <li>Dataset: UCI Car Evaluation (categorical features)</li>
                         <li>Techniques: Ordinal encoding, Random Forest, validation curves, feature importance</li>
@@ -344,8 +344,8 @@
                     <p><strong>Summary:</strong><br>
                     Built a robust spam detection pipeline with text preprocessing, feature engineering, and multiple vectorization techniques. Compared Naive Bayes, Logistic Regression, and Random Forest classifiers. Naive Bayes with CountVectorizer achieved <b>98.7% accuracy</b> on the test set. Visualizations include model performance, confusion matrix, and word frequency analysis.
                     </p>
-                    <img src="images/spam_classification_results.png" alt="Classification Results" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <img src="images/spam_ham_word_frequency.png" alt="Word Frequency" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/Bag-of-words spam classification/spam_classification_results.png" alt="Classification Results" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/Bag-of-words spam classification/spam_ham_word_frequency.png" alt="Word Frequency" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
                     <ul>
                         <li>Dataset: spam.csv (SMS spam/ham messages)</li>
                         <li>Techniques: Feature engineering, CountVectorizer, TfidfVectorizer, model comparison</li>
@@ -369,9 +369,9 @@
                     <p><strong>Summary:</strong><br>
                     Built and visualized a decision tree classifier to predict the best drug for a patient based on health metrics. The model achieved <b>97.5% accuracy</b> and provides clear, rule-based predictions. Visualizations include feature importance, confusion matrix, and the full decision tree.
                     </p>
-                    <img src="images/feature_importance.png" alt="Feature Importance" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <img src="images/confusion_matrix.png" alt="Confusion Matrix" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <img src="images/decision_tree.png" alt="Decision Tree" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/decision_tree_drug/feature_importance.png" alt="Feature Importance" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/decision_tree_drug/confusion_matrix.png" alt="Confusion Matrix" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/decision_tree_drug/decision_tree.png" alt="Decision Tree" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
                     <ul>
                         <li>Dataset: drug200.csv (patient health metrics)</li>
                         <li>Techniques: Categorical encoding, decision tree, visualization</li>
@@ -395,8 +395,8 @@
                     <p><strong>Summary:</strong><br>
                     Built and trained a convolutional neural network to classify images of roses, daisies, dandelions, sunflowers, and tulips. The pipeline includes automated data loading, preprocessing, and extensive data augmentation to improve generalization. The model achieved <b>91.2% accuracy</b> on the training set and <b>73.6% validation accuracy</b>.
                     </p>
-                    <img src="images/model_performance.png" alt="Model Performance" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <img src="images/predictions.png" alt="Predictions Grid" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/CNN_flower/model_performance.png" alt="Model Performance" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/CNN_flower/predictions.png" alt="Predictions Grid" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
                     <ul>
                         <li>Dataset: 3,670 images, 5 flower species</li>
                         <li>Techniques: Data augmentation, dropout, normalization</li>
@@ -420,9 +420,9 @@
                     <p><strong>Summary:</strong><br>
                     Applied RFM (Recency, Frequency, Monetary) analysis and K-Means clustering to segment retail customers into four distinct groups. The project features robust preprocessing, outlier removal, and comprehensive visualizations. Key business insights include identifying high-value, loyal, at-risk, and occasional customers.
                     </p>
-                    <img src="images/elbow_curve.png" alt="Elbow Curve" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <img src="images/customer_segmentation.png" alt="Customer Segmentation" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <img src="images/cluster_characteristics.png" alt="Cluster Characteristics" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/K_means_segment/elbow_curve.png" alt="Elbow Curve" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/K_means_segment/customer_segmentation.png" alt="Customer Segmentation" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                    <img src="images/K_means_segment/cluster_characteristics.png" alt="Cluster Characteristics" style="max-width: 100%; margin: 1rem 0; border-radius: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
                     <ul>
                         <li>Dataset: Online Retail (4,293 customers, 3 RFM features)</li>
                         <li>Techniques: RFM analysis, outlier removal, K-Means, visualization</li>
