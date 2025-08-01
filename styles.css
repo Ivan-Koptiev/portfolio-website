@@ -1047,6 +1047,14 @@ window.addEventListener('DOMContentLoaded', () => {
     transform: scale(0.97);
     box-shadow: 0 0 12px #2563ebcc;
 }
+.profile-social-btn.linkedin:visited {
+    background: linear-gradient(90deg, #181c2f 60%, #2563eb 100%) !important;
+    color: #fff !important;
+}
+.profile-social-btn.github:visited {
+    background: linear-gradient(90deg, #181c2f 60%, #2563eb 100%) !important;
+    color: #fff !important;
+}
 @media (max-width: 600px) {
     .profile-social-btn {
         font-size: 0.98rem;
