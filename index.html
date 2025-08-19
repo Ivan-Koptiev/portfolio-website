@@ -18,6 +18,7 @@
                 <div class="profile-info">
                     <h1>Ivan Koptiev</h1>
                     <p class="title">Machine and Deep Learning Engineer</p>
+                    <p class="current-role">ML Research Intern at SERP AI — Aug 2025–Present</p>
                     <div class="contact-info">
                         <p><i class="fas fa-map-marker-alt"></i> Rhode Island, USA</p>
                         <p><i class="fas fa-envelope"></i> koptew.ivan@gmail.com</p>
@@ -34,6 +35,7 @@
     <!-- Navigation -->
     <nav class="sticky-nav">
         <a href="#about-me">About Me</a>
+        <a href="#experience">Experience</a>
         <a href="#major-projects">Projects</a>
         <a href="#contact">Contact</a>
     </nav>
@@ -49,6 +51,7 @@
         <div class="about-content">
             <div class="about-text">
                 <ul style="color:#e0e7ef; font-size:1.13rem; font-weight:500; margin-bottom:1.5rem;">
+                    <li><strong>Currently:</strong> ML Research Intern at SERP AI (Aug 2025–Present) building an open boxing dataset for punch recognition.</li>
                     <li>High school senior based in Rhode Island, USA, passionate about <strong>Machine
                         Learning</strong> and <strong>Deep Learning</strong>.</li>
                     <li>Interested in building and experimenting with AI models to solve real-world problems and always
@@ -97,6 +100,40 @@
         </div>
     </section>
 
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Machine Learning Research Intern — SERP AI × Boxing Undefeated</h3>
+                <div class="preview">
+                    <p>
+                        Building an open, real‑time boxing punch dataset and tracking pipeline. Aug 2025 — Present.
+                    </p>
+                </div>
+                <div class="full-description" style="display:none;">
+                    <p><strong>Description:</strong><br>
+                    SERP AI is teaming up with Boxing Undefeated to create the first open, comprehensive boxing dataset focused on punch recognition and classification. We are labeling boxing match videos to power future ML models for real-time, open-source punch tracking and analytics for gyms, trainers, analysts, and fans.
+                    </p>
+                    <ul>
+                        <li>Direct impact on the boxing community</li>
+                        <li>Credit in research papers and applications using the dataset</li>
+                        <li>Experience with annotation tools and data creation</li>
+                        <li>Official internship credit from SERP AI</li>
+                        <li>LinkedIn recommendation from SERP founder Devin Schumacher</li>
+                        <li>Listed as a team member on the SERP AI company page</li>
+                        <li>Professional reference letter for job applications</li>
+                        <li>Portfolio addition with legitimate project experience</li>
+                    </ul>
+                    <ul>
+                        <li>Responsibilities: video annotation, label taxonomy refinement, quality control, and preparing data for model training.</li>
+                    </ul>
+                    <p><strong>Status:</strong> Active • <strong>Start date:</strong> August 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Major Projects Section -->
     <section id="major-projects">
         <h2>Projects</h2>
@@ -546,7 +583,36 @@
             });
         }
 
-        document.addEventListener('DOMContentLoaded', setupProjectModals);
+        // Show a small site-wide tip once about clicking cards
+        function showSiteTipOnce() {
+            const TIP_KEY = 'dismissedCardTipV1';
+            if (localStorage.getItem(TIP_KEY) === '1') return;
+
+            const tip = document.createElement('div');
+            tip.className = 'site-tip';
+            tip.innerHTML = `
+                <div class="site-tip-content">
+                    <span class="site-tip-text">Tip: Click any project or experience card to see full details. Press Esc to close.</span>
+                    <div class="site-tip-actions">
+                        <button class="site-tip-btn">Got it</button>
+                        <button class="site-tip-close" aria-label="Close tip">×</button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(tip);
+            const dismiss = () => {
+                tip.style.opacity = '0';
+                setTimeout(() => tip.remove(), 220);
+                localStorage.setItem(TIP_KEY, '1');
+            };
+            tip.querySelector('.site-tip-btn')?.addEventListener('click', dismiss);
+            tip.querySelector('.site-tip-close')?.addEventListener('click', dismiss);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setupProjectModals();
+            showSiteTipOnce();
+        });
 
         // Close modal with Escape key
         document.addEventListener('keydown', (e) => {
