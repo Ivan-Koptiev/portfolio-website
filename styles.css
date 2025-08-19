@@ -145,9 +145,20 @@ header::before {
     transition: var(--transition);
 }
 
+/* Header current role badge */
+.current-role {
+    display: inline-block;
+    margin: 0.25rem 0 0.75rem 0;
+    padding: 0.35rem 0.8rem;
+    border-radius: 0.6rem;
+    background: rgba(96,165,250,0.15);
+    color: #e0e7ef;
+    font-weight: 700;
+    border: 1.5px solid #60a5fa;
+}
+
 /* Navigation Styling */
 .sticky-nav {
-    text-decoration: none;
     background: rgba(24,28,47,0.98);
     backdrop-filter: blur(10px);
     border-bottom: 2.5px solid #2563eb;
@@ -164,7 +175,6 @@ header::before {
 }
 
 .sticky-nav a {
-    text-decoration: none;
     color: #fff !important;
     font-weight: 800;
     font-size: 1.25rem;
@@ -268,7 +278,8 @@ header::before {
 /* Section Headings */
 #major-projects h2,
 #about-me h2,
-#contact h2 {
+#contact h2,
+#experience h2 {
     font-size: 3.2rem;
     font-weight: 900;
     color: #fff;
@@ -282,7 +293,8 @@ header::before {
 
 #major-projects h2::after,
 #about-me h2::after,
-#contact h2::after {
+#contact h2::after,
+#experience h2::after {
     content: '';
     display: block;
     margin: 1.1rem auto 0 auto;
@@ -297,7 +309,8 @@ header::before {
 
 #major-projects,
 #about-me,
-#contact {
+#contact,
+#experience {
     position: relative;
     padding-top: 2rem;
     border: 2.5px solid rgba(96, 165, 250, 0.22);
@@ -309,7 +322,8 @@ header::before {
 
 #major-projects::before,
 #about-me::before,
-#contact::before {
+#contact::before,
+#experience::before {
     content: '';
     position: absolute;
     top: 0;
@@ -332,6 +346,72 @@ header::before {
     padding: 0 2rem;
     border: none !important;
     box-shadow: none !important;
+}
+
+/* Experience section: visually distinct but on-brand */
+#experience {
+    max-width: 1200px;
+    margin: 0 auto var(--section-spacing);
+    padding: 4rem 2rem 6rem 2rem;
+    border-radius: var(--border-radius);
+    background: linear-gradient(120deg, #181c2f 70%, #3b82f6 100%);
+    border: 2.5px solid rgba(96, 165, 250, 0.35);
+    box-shadow: 0 2px 24px rgba(30, 41, 59, 0.16), 0 0 32px rgba(59,130,246,0.18);
+    position: relative;
+    overflow: hidden; /* contain hover glow while providing ample padding */
+}
+#experience::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: var(--border-radius);
+    pointer-events: none;
+    border: 3px solid transparent;
+    background: linear-gradient(120deg, #60a5fa 0%, #2563eb 100%) border-box;
+    opacity: 0.12;
+    z-index: 0;
+}
+
+#experience .projects-grid {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr); /* one card per row without overflow */
+}
+
+/* Experience cards: reduced glow compared to projects */
+#experience .project-card {
+    background: #181c2f; /* align with project cards at rest */
+    border-left-color: var(--primary-color);
+    border-left-width: 5px; /* thinner at rest */
+    transition: box-shadow 0.6s cubic-bezier(0.4,0,0.2,1), transform 0.6s cubic-bezier(0.4,0,0.2,1), border-color 0.4s, border-left-width 0.2s ease;
+    box-shadow: 0 0 24px 6px rgba(37, 99, 235, 0.20), 0 3px 18px rgba(37, 99, 235, 0.14), 0 2px 8px rgba(30, 41, 59, 0.10);
+    box-sizing: border-box; /* ensure padding/border stay inside track */
+    max-width: 100%;
+    margin: 0 0 2rem 0;
+    padding: 1.75rem; /* slightly tighter vertically */
+}
+#experience .project-card h3 {
+    background-color: var(--background-color);
+    margin-bottom: 0.8rem;
+}
+#experience .project-card:hover {
+    transform: scale(1.004);
+    box-shadow: 0 0 28px 10px #2563eb44, 0 2px 8px #60a5fa33;
+    border-color: #60a5fa;
+    z-index: 3;
+    border-left-width: 8px; /* match project card hover feel */
+}
+
+/* Keep Experience card concise at a glance; full details open in modal */
+#experience .preview p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 1.1rem;
 }
 
 .projects-grid {
@@ -743,7 +823,7 @@ footer p {
     margin-right: auto;
     display: block;
 }
-#major-projects h2, #about-me h2, #contact h2 {
+#major-projects h2, #about-me h2, #contact h2, #experience h2 {
     text-align: center;
 }
 
@@ -1032,8 +1112,8 @@ window.addEventListener('DOMContentLoaded', () => {
     border-color: #2563eb;
 }
 .profile-social-btn.linkedin {
-    background: linear-gradient(90deg, #181c2f 60%, #2563eb 100%);
-    border-color: #2563eb;
+    background: linear-gradient(90deg, #2563eb 0%, #60a5fa 100%);
+    border-color: #60a5fa;
 }
 .profile-social-btn:hover, .profile-social-btn:focus {
     background: linear-gradient(90deg, #2563eb 0%, #60a5fa 100%);
@@ -1046,14 +1126,6 @@ window.addEventListener('DOMContentLoaded', () => {
 .profile-social-btn:active {
     transform: scale(0.97);
     box-shadow: 0 0 12px #2563ebcc;
-}
-.profile-social-btn.linkedin:visited {
-    background: linear-gradient(90deg, #181c2f 60%, #2563eb 100%) !important;
-    color: #fff !important;
-}
-.profile-social-btn.github:visited {
-    background: linear-gradient(90deg, #181c2f 60%, #2563eb 100%) !important;
-    color: #fff !important;
 }
 @media (max-width: 600px) {
     .profile-social-btn {
@@ -1075,4 +1147,64 @@ window.addEventListener('DOMContentLoaded', () => {
     font-weight: 900;
     text-align: center;
     max-width: 320px;
+}
+
+/* Site-wide tip (dismissible) */
+.site-tip {
+    position: fixed;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    z-index: 10000;
+    background: #0b1220cc;
+    border: 2px solid #2563eb;
+    border-radius: 0.9rem;
+    box-shadow: 0 8px 24px rgba(37,99,235,0.25);
+    backdrop-filter: blur(6px);
+    color: #e5edff;
+    overflow: hidden;
+    transition: opacity 0.2s ease;
+}
+.site-tip-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 1rem 0.8rem 1rem;
+}
+.site-tip-text {
+    font-size: 0.98rem;
+    font-weight: 700;
+}
+.site-tip-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.site-tip-btn {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 0.45rem 0.8rem;
+    border-radius: 0.5rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+.site-tip-btn:hover { background: var(--secondary-color); }
+.site-tip-close {
+    background: transparent;
+    color: #e5edff;
+    border: 1.5px solid #60a5fa88;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+.site-tip-close:hover { background: #1b2440; }
+
+@media (max-width: 600px) {
+    .site-tip { left: 0.75rem; right: 0.75rem; }
 }
