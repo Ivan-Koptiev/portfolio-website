@@ -1113,15 +1113,17 @@ window.addEventListener('DOMContentLoaded', () => {
     font-size: 1.25rem;
     margin-right: 0.3rem;
 }
-.profile-social-btn.github {
-    background: linear-gradient(90deg, #181c2f 60%, #2563eb 100%);
-    border-color: #2563eb;
-}
+
+/* GitHub and LinkedIn both share the same base style */
+.profile-social-btn.github,
 .profile-social-btn.linkedin {
     background: linear-gradient(90deg, #181c2f 60%, #2563eb 100%);
     border-color: #2563eb;
 }
-.profile-social-btn:hover, .profile-social-btn:focus {
+
+/* Shared hover/focus effect */
+.profile-social-btn:hover, 
+.profile-social-btn:focus {
     background: linear-gradient(90deg, #2563eb 0%, #60a5fa 100%);
     color: #fff;
     box-shadow: 0 0 24px #2563ebcc, 0 2px 12px #60a5fa88;
@@ -1130,17 +1132,13 @@ window.addEventListener('DOMContentLoaded', () => {
     text-shadow: 0 0 12px #60a5fa;
 }
 
-/* LinkedIn-specific hover effect */
-.profile-social-btn.linkedin:hover, .profile-social-btn.linkedin:focus {
-    background: linear-gradient(90deg, #0a66c2 0%, #0077b5 100%);
-    border-color: #0077b5;
-    box-shadow: 0 0 24px #0a66c2cc, 0 2px 12px #0077b588;
-    text-shadow: 0 0 12px #0077b5;
-}
+/* Active (click) effect */
 .profile-social-btn:active {
     transform: scale(0.97);
     box-shadow: 0 0 12px #2563ebcc;
 }
+
+/* Responsive size adjustments */
 @media (max-width: 600px) {
     .profile-social-btn {
         font-size: 0.98rem;
@@ -1150,6 +1148,7 @@ window.addEventListener('DOMContentLoaded', () => {
         font-size: 1rem;
     }
 }
+
 
 /* Make 'View on GitHub' button in modal/full view larger, centered, and below the text */
 .modal-content .project-link {
@@ -1222,4 +1221,5 @@ window.addEventListener('DOMContentLoaded', () => {
 @media (max-width: 600px) {
     .site-tip { left: 0.75rem; right: 0.75rem; }
 }
+
 
