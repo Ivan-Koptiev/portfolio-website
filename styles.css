@@ -1118,8 +1118,8 @@ window.addEventListener('DOMContentLoaded', () => {
     border-color: #2563eb;
 }
 .profile-social-btn.linkedin {
-    background: linear-gradient(90deg, #1f6fe0 0%, #5aa0ff 100%);
-    border-color: #5aa0ff;
+    background: linear-gradient(90deg, #181c2f 60%, #2563eb 100%);
+    border-color: #2563eb;
 }
 .profile-social-btn:hover, .profile-social-btn:focus {
     background: linear-gradient(90deg, #2563eb 0%, #60a5fa 100%);
@@ -1222,3 +1222,4 @@ window.addEventListener('DOMContentLoaded', () => {
 @media (max-width: 600px) {
     .site-tip { left: 0.75rem; right: 0.75rem; }
 }
+
