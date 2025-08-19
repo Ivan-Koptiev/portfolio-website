@@ -211,7 +211,7 @@ header::before {
     text-decoration: none;
 }
 
-/* About Me Section */
+/* About Me Section styling*/
 #about-me {
     max-width: 1200px;
     margin: 0 auto var(--section-spacing);
