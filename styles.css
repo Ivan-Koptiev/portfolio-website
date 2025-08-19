@@ -949,7 +949,7 @@ header::before {
     transition: var(--transition);
 }
 
-/* 4. Enhance contact section */
+/* 4. Enhance contact section styling*/
 #contact {
     background: linear-gradient(120deg, #181c2f 60%, #2563eb 100%);
     box-shadow: 0 0 64px 16px #2563eb33, 0 8px 32px #2563eb22;
