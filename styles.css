@@ -211,7 +211,7 @@ header::before {
     text-decoration: none;
 }
 
-/* About Me Section styling*/
+/* About Me Section */
 #about-me {
     max-width: 1200px;
     margin: 0 auto var(--section-spacing);
@@ -1118,7 +1118,7 @@ window.addEventListener('DOMContentLoaded', () => {
     border-color: #2563eb;
 }
 .profile-social-btn.linkedin {
-    background: linear-gradient(90deg, #181c2f 60%, #2563eb 100%);
+    background: linear-gradient(90deg, #1f6fe0 0%, #5aa0ff 100%);
     border-color: #5aa0ff;
 }
 .profile-social-btn:hover, .profile-social-btn:focus {
@@ -1128,6 +1128,14 @@ window.addEventListener('DOMContentLoaded', () => {
     border-color: #60a5fa;
     transform: scale(1.07);
     text-shadow: 0 0 12px #60a5fa;
+}
+
+/* LinkedIn-specific hover effect */
+.profile-social-btn.linkedin:hover, .profile-social-btn.linkedin:focus {
+    background: linear-gradient(90deg, #0a66c2 0%, #0077b5 100%);
+    border-color: #0077b5;
+    box-shadow: 0 0 24px #0a66c2cc, 0 2px 12px #0077b588;
+    text-shadow: 0 0 12px #0077b5;
 }
 .profile-social-btn:active {
     transform: scale(0.97);
@@ -1214,4 +1222,3 @@ window.addEventListener('DOMContentLoaded', () => {
 @media (max-width: 600px) {
     .site-tip { left: 0.75rem; right: 0.75rem; }
 }
-
