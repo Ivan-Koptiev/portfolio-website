@@ -3,11 +3,11 @@
     --primary-color: #2563eb;
     --secondary-color: #1e40af;
     --accent-color: #60a5fa;
-    --background-color: #f8fafc;
-    --card-background: #ffffff;
-    --text-color: #1e293b;
-    --text-light: #64748b;
-    --header-background: #e2e8f0;
+    --background-color: #0f172a;
+    --card-background: #1e293b;
+    --text-color: #f8fafc;
+    --text-light: #94a3b8;
+    --header-background: #0f172a;
     --section-title-size: 2.5rem;
     --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --card-hover-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -27,6 +27,10 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.7;
+}
+
+section[id] {
+    scroll-margin-top: 6rem;
 }
 
 /* Header Styling */
@@ -143,6 +147,16 @@ header::before {
     color: #60a5fa;
     font-size: 1.2rem;
     transition: var(--transition);
+}
+
+.contact-info a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.contact-info a:hover,
+.contact-info a:focus {
+    text-decoration: underline;
 }
 
 /* Header current role badge */
@@ -285,7 +299,8 @@ header::before {
 #major-projects h2,
 #about-me h2,
 #contact h2,
-#experience h2 {
+#experience h2,
+#education h2 {
     font-size: 3.2rem;
     font-weight: 900;
     color: #fff;
@@ -300,7 +315,8 @@ header::before {
 #major-projects h2::after,
 #about-me h2::after,
 #contact h2::after,
-#experience h2::after {
+#experience h2::after,
+#education h2::after {
     content: '';
     display: block;
     margin: 1.1rem auto 0 auto;
@@ -316,7 +332,8 @@ header::before {
 #major-projects,
 #about-me,
 #contact,
-#experience {
+#experience,
+#education {
     position: relative;
     padding-top: 2rem;
     border: 2.5px solid rgba(96, 165, 250, 0.22);
@@ -329,7 +346,8 @@ header::before {
 #major-projects::before,
 #about-me::before,
 #contact::before,
-#experience::before {
+#experience::before,
+#education::before {
     content: '';
     position: absolute;
     top: 0;
@@ -354,8 +372,9 @@ header::before {
     box-shadow: none !important;
 }
 
-/* Experience section: visually distinct but on-brand */
-#experience {
+/* Experience & Education sections: visually distinct but on-brand */
+#experience,
+#education {
     max-width: 1200px;
     margin: 0 auto var(--section-spacing);
     padding: 4rem 2rem 6rem 2rem;
@@ -366,7 +385,8 @@ header::before {
     position: relative;
     overflow: hidden; /* contain hover glow while providing ample padding */
 }
-#experience::after {
+#experience::after,
+#education::after {
     content: '';
     position: absolute;
     inset: 0;
@@ -378,7 +398,8 @@ header::before {
     z-index: 0;
 }
 
-#experience .projects-grid {
+#experience .projects-grid,
+#education .projects-grid {
     position: relative;
     z-index: 1;
     width: 100%;
@@ -388,7 +409,8 @@ header::before {
 }
 
 /* Experience cards: reduced glow compared to projects */
-#experience .project-card {
+#experience .project-card,
+#education .project-card {
     background: #181c2f; /* align with project cards at rest */
     border-left-color: var(--primary-color);
     border-left-width: 5px; /* thinner at rest */
@@ -399,11 +421,13 @@ header::before {
     margin: 0 0 2rem 0;
     padding: 1.75rem; /* slightly tighter vertically */
 }
-#experience .project-card h3 {
+#experience .project-card h3,
+#education .project-card h3 {
     background-color: var(--background-color);
     margin-bottom: 0.8rem;
 }
-#experience .project-card:hover {
+#experience .project-card:hover,
+#education .project-card:hover {
     transform: scale(1.004);
     box-shadow: 0 0 28px 10px #2563eb44, 0 2px 8px #60a5fa33;
     border-color: #60a5fa;
@@ -412,12 +436,20 @@ header::before {
 }
 
 /* Keep Experience card concise at a glance; full details open in modal */
-#experience .preview p {
+#experience .preview p,
+#education .preview p {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     margin-bottom: 1.1rem;
+}
+
+@media (min-width: 900px) {
+    #education .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem;
+    }
 }
 
 .projects-grid {
@@ -640,7 +672,7 @@ header::before {
 
 /* Footer */
 footer {
-    background-color: var(--text-color);
+    background-color: #0f172a;
     color: white;
     text-align: center;
     padding: 2rem 0;
@@ -680,9 +712,24 @@ footer p {
     }
 
     .sticky-nav {
-        padding: 1rem;
-        gap: 1rem;
-        flex-wrap: wrap;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        gap: 0.6rem;
+        padding: 0.65rem 0.8rem;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .sticky-nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .sticky-nav a {
+        flex: 0 0 auto;
+        font-size: 0.95rem;
+        padding: 0.55rem 1rem;
+        margin: 0;
     }
 
     .modal-content {
@@ -829,7 +876,7 @@ footer p {
     margin-right: auto;
     display: block;
 }
-#major-projects h2, #about-me h2, #contact h2, #experience h2 {
+#major-projects h2, #about-me h2, #contact h2, #experience h2, #education h2 {
     text-align: center;
 }
 
@@ -1116,13 +1163,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
 /* GitHub and LinkedIn both share the same base style */
 .profile-social-btn.github,
-.profile-social-btn.linkedin {
+.profile-social-btn.linkedin,
+.profile-social-btn.resume {
     background: linear-gradient(90deg, #181c2f 60%, #2563eb 100%);
     border-color: #2563eb;
 }
 
 /* Shared hover/focus effect */
-.profile-social-btn:hover, 
+.profile-social-btn:hover,
 .profile-social-btn:focus {
     background: linear-gradient(90deg, #2563eb 0%, #60a5fa 100%);
     color: #fff;
@@ -1161,65 +1209,4 @@ window.addEventListener('DOMContentLoaded', () => {
     text-align: center;
     max-width: 320px;
 }
-
-/* Site-wide tip (dismissible) */
-.site-tip {
-    position: fixed;
-    bottom: 1.25rem;
-    right: 1.25rem;
-    z-index: 10000;
-    background: #0b1220cc;
-    border: 2px solid #2563eb;
-    border-radius: 0.9rem;
-    box-shadow: 0 8px 24px rgba(37,99,235,0.25);
-    backdrop-filter: blur(6px);
-    color: #e5edff;
-    overflow: hidden;
-    transition: opacity 0.2s ease;
-}
-.site-tip-content {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 0.8rem 1rem 0.8rem 1rem;
-}
-.site-tip-text {
-    font-size: 0.98rem;
-    font-weight: 700;
-}
-.site-tip-actions {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-.site-tip-btn {
-    background: var(--primary-color);
-    color: #fff;
-    border: none;
-    padding: 0.45rem 0.8rem;
-    border-radius: 0.5rem;
-    font-weight: 800;
-    cursor: pointer;
-}
-.site-tip-btn:hover { background: var(--secondary-color); }
-.site-tip-close {
-    background: transparent;
-    color: #e5edff;
-    border: 1.5px solid #60a5fa88;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.1rem;
-}
-.site-tip-close:hover { background: #1b2440; }
-
-@media (max-width: 600px) {
-    .site-tip { left: 0.75rem; right: 0.75rem; }
-}
-
 
